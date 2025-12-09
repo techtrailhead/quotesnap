@@ -6,7 +6,9 @@ import { TEMPLATES, type TemplateConfig, type TemplateKey } from "./templates";
 const WIDTH = 1080;
 const HEIGHT = 1350;
 
-type CanvasBindings = typeof import("@napi-rs/canvas");
+type CanvasBindings = (typeof import("@napi-rs/canvas")) & {
+  registerFont?: (path: string, options: { family: string; weight?: string }) => void;
+};
 
 export async function renderQuoteImage(text: string, templateKey: TemplateKey): Promise<Buffer> {
   const normalizedText = text?.trim();
@@ -19,7 +21,9 @@ export async function renderQuoteImage(text: string, templateKey: TemplateKey): 
     throw new Error("Unknown template");
   }
 
-  const { createCanvas, loadImage, registerFont } = await import("@napi-rs/canvas");
+  const canvasLib = (await import("@napi-rs/canvas")) as CanvasBindings;
+  const { createCanvas, loadImage } = canvasLib;
+  const registerFont = canvasLib.registerFont;
   ensureFonts(registerFont);
 
   const canvas = createCanvas(WIDTH, HEIGHT);
@@ -196,8 +200,8 @@ function resolveImagePath(imagePath: string) {
 }
 
 let fontsRegistered = false;
-function ensureFonts(registerFont: CanvasBindings["registerFont"]) {
-  if (fontsRegistered) return;
+function ensureFonts(registerFont?: CanvasBindings["registerFont"]) {
+  if (fontsRegistered || !registerFont) return;
   const fontCandidates = [
     {
       path: resolveModulePath("@fontsource/inter/files/inter-latin-600-normal.ttf"),

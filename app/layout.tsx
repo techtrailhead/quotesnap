@@ -1,13 +1,6 @@
 import "./globals.css";
 import { ReactNode } from "react";
 import Link from "next/link";
-import { Playfair_Display } from "next/font/google";
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  weight: ["400", "500", "600", "700"]
-});
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const floatingQuotes = [
@@ -18,7 +11,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   ];
 
   return (
-    <html lang="en" className={playfair.variable}>
+    <html lang="en">
       <head>
         <link rel="icon" href="/favicon.svg" />
       </head>

@@ -20,7 +20,7 @@ export async function POST(req: Request) {
 
     const buffer = await renderQuoteImage(text, template as TemplateKey);
 
-    return new NextResponse(buffer, {
+    return new NextResponse(buffer as unknown as BodyInit, {
       status: 200,
       headers: {
         "Content-Type": "image/png",
