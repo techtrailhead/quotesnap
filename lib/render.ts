@@ -42,7 +42,7 @@ export async function renderQuoteImage(text: string, templateKey: TemplateKey): 
   applyTextShadow(ctx, template.textShadow);
 
   const maxWidth = WIDTH - template.padding * 2;
-  ctx.font = `${fontSize}px ${template.fontFamily}, serif`;
+  ctx.font = `${fontSize}px ${template.fontFamily}, 'Inter', sans-serif`;
 
   let lines = wrapText(ctx, normalizedText, maxWidth);
   let lineHeightPx = fontSize * template.lineHeight;
@@ -208,6 +208,11 @@ let fontsRegistered = false;
 function ensureFonts(registerFont?: CanvasBindings["registerFont"]) {
   if (fontsRegistered || !registerFont) return;
   const fontCandidates = [
+    {
+      path: resolveModulePath("@fontsource/inter/files/inter-latin-400-normal.ttf"),
+      family: "Inter",
+      weight: "400"
+    },
     {
       path: resolveModulePath("@fontsource/inter/files/inter-latin-600-normal.ttf"),
       family: "Inter",

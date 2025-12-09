@@ -17,7 +17,7 @@ export interface TemplateConfig {
 export const TEMPLATES: Record<TemplateKey, TemplateConfig> = {
   typewriter: {
     label: "Typewriter",
-    fontFamily: "'Special Elite', 'Courier New', monospace",
+    fontFamily: "'Special Elite', 'Courier New', monospace, 'Inter', sans-serif",
     fontSizeQuote: 64,
     fontSizePassage: 48,
     textColor: "#2d1a0f",
@@ -41,7 +41,7 @@ export const TEMPLATES: Record<TemplateKey, TemplateConfig> = {
   },
   nebula: {
     label: "Golden Roost",
-    fontFamily: "'Playfair Display', 'Times New Roman', serif",
+    fontFamily: "'Playfair Display', 'Times New Roman', serif, 'Inter', sans-serif",
     fontSizeQuote: 72,
     fontSizePassage: 56,
     textColor: "#1e140a",
@@ -54,7 +54,7 @@ export const TEMPLATES: Record<TemplateKey, TemplateConfig> = {
   },
   cloudy: {
     label: "Dried Leaves",
-    fontFamily: "'Playfair Display', 'Times New Roman', serif",
+    fontFamily: "'Playfair Display', 'Times New Roman', serif, 'Inter', sans-serif",
     fontSizeQuote: 68,
     fontSizePassage: 52,
     textColor: "#2e241c",
