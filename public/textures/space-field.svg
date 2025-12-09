@@ -1,0 +1,51 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="sky1" cx="30%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#2f3541" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0b0d12" stop-opacity="0.95"/>
+    </radialGradient>
+    <radialGradient id="sky2" cx="80%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#3f4756" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0b0d12" stop-opacity="0.95"/>
+    </radialGradient>
+    <radialGradient id="sky3" cx="50%" cy="80%" r="70%">
+      <stop offset="0%" stop-color="#1f2734" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#07080d" stop-opacity="0.95"/>
+    </radialGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#dfe4ef" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="#05070c"/>
+  <rect width="1080" height="1350" fill="url(#sky1)" opacity="0.95"/>
+  <rect width="1080" height="1350" fill="url(#sky2)" opacity="0.85"/>
+  <rect width="1080" height="1350" fill="url(#sky3)" opacity="0.8"/>
+  <g opacity="0.22">
+    <rect width="1080" height="1350" fill="url(#moonGlow)" transform="translate(700 60) scale(0.5)"/>
+  </g>
+  <g>
+    <circle cx="880" cy="140" r="42" fill="#f8fbff" opacity="0.9"/>
+    <circle cx="880" cy="140" r="68" fill="url(#moonGlow)"/>
+    <circle cx="900" cy="140" r="44" fill="#0b0d12" opacity="0.78"/>
+  </g>
+  <g fill="#f6f8fb" opacity="0.9">
+    <!-- stars -->
+    <circle cx="80" cy="120" r="1.2"/><circle cx="200" cy="180" r="1.4"/><circle cx="320" cy="90" r="1.1"/>
+    <circle cx="480" cy="140" r="1.6"/><circle cx="620" cy="60" r="1.2"/><circle cx="760" cy="110" r="1.5"/>
+    <circle cx="910" cy="160" r="1.3"/><circle cx="1040" cy="90" r="1.1"/><circle cx="140" cy="260" r="1.3"/>
+    <circle cx="340" cy="240" r="1.2"/><circle cx="520" cy="260" r="1.4"/><circle cx="700" cy="220" r="1.6"/>
+    <circle cx="880" cy="260" r="1.2"/><circle cx="1020" cy="240" r="1.5"/><circle cx="220" cy="360" r="1.2"/>
+    <circle cx="440" cy="340" r="1.4"/><circle cx="640" cy="360" r="1.1"/><circle cx="860" cy="340" r="1.3"/>
+    <circle cx="1040" cy="360" r="1.2"/><circle cx="120" cy="480" r="1.3"/><circle cx="320" cy="500" r="1.1"/>
+    <circle cx="520" cy="460" r="1.2"/><circle cx="720" cy="500" r="1.4"/><circle cx="940" cy="460" r="1.2"/>
+    <circle cx="180" cy="620" r="1.5"/><circle cx="380" cy="600" r="1.3"/><circle cx="580" cy="640" r="1.2"/>
+    <circle cx="780" cy="600" r="1.1"/><circle cx="980" cy="620" r="1.4"/><circle cx="140" cy="760" r="1.2"/>
+    <circle cx="340" cy="800" r="1.3"/><circle cx="540" cy="760" r="1.1"/><circle cx="740" cy="800" r="1.4"/>
+    <circle cx="940" cy="760" r="1.3"/><circle cx="200" cy="900" r="1.5"/><circle cx="400" cy="940" r="1.2"/>
+    <circle cx="620" cy="900" r="1.4"/><circle cx="820" cy="940" r="1.1"/><circle cx="1020" cy="900" r="1.3"/>
+    <circle cx="160" cy="1060" r="1.3"/><circle cx="360" cy="1100" r="1.2"/><circle cx="560" cy="1060" r="1.5"/>
+    <circle cx="760" cy="1100" r="1.3"/><circle cx="960" cy="1060" r="1.1"/><circle cx="240" cy="1220" r="1.2"/>
+    <circle cx="480" cy="1260" r="1.4"/><circle cx="700" cy="1220" r="1.3"/><circle cx="920" cy="1260" r="1.2"/>
+  </g>
+</svg>

@@ -1,0 +1,55 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f6e7c8"/>
+      <stop offset="100%" stop-color="#e0c292"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.45"/>
+    </radialGradient>
+    <filter id="noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" result="f1"/>
+      <feColorMatrix in="f1" type="matrix" values="0 0 0 0 0.4  0 0 0 0 0.32  0 0 0 0 0.25  0 0 0 0.28 0" result="f2"/>
+      <feBlend in="SourceGraphic" in2="f2" mode="multiply"/>
+    </filter>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#paper)"/>
+  <rect width="1080" height="1350" fill="url(#vignette)" opacity="0.35"/>
+  <rect width="1080" height="1350" filter="url(#noise)" opacity="0.35"/>
+  <g opacity="0.25" fill="#b98c5a">
+    <path d="M0 90c220 30 440 20 660-20-40 30-80 44-120 46-220 16-360 10-540-26Z"/>
+    <path d="M1080 1040c-220 30-480 10-640-22 40 32 96 60 180 70 200 26 360 6 460-48Z"/>
+  </g>
+  <g opacity="0.22" fill="#c79b66">
+    <ellipse cx="140" cy="240" rx="160" ry="70"/>
+    <ellipse cx="860" cy="260" rx="140" ry="60"/>
+    <ellipse cx="520" cy="620" rx="220" ry="80"/>
+    <ellipse cx="220" cy="900" rx="160" ry="60"/>
+    <ellipse cx="860" cy="940" rx="180" ry="70"/>
+  </g>
+  <g opacity="0.18" stroke="#9a7b4e" stroke-width="1.2">
+    <path d="M40 180c240 30 440 22 620-26"/>
+    <path d="M120 620c240 40 460 30 660-40"/>
+    <path d="M160 1100c240 36 480 26 720-40"/>
+  </g>
+  <g opacity="0.2" fill="none" stroke="#8c6f49" stroke-width="1">
+    <path d="M40 90c160 26 300 22 420 6"/>
+    <path d="M120 1260c220 24 420 8 640-36"/>
+  </g>
+  <g opacity="0.35" fill="#a1794e">
+    <circle cx="120" cy="320" r="8"/>
+    <circle cx="220" cy="600" r="6"/>
+    <circle cx="520" cy="500" r="7"/>
+    <circle cx="680" cy="300" r="6"/>
+    <circle cx="860" cy="660" r="8"/>
+    <circle cx="940" cy="420" r="5"/>
+    <circle cx="320" cy="880" r="6"/>
+    <circle cx="720" cy="1100" r="7"/>
+    <circle cx="460" cy="1160" r="5"/>
+  </g>
+  <g opacity="0.24" stroke="#8c6f49" stroke-width="1.4">
+    <path d="M120 430q60-30 120 0t120 0 120 0"/>
+    <path d="M760 860q60 20 120 0t120 0"/>
+  </g>
+</svg>

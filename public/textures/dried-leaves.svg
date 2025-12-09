@@ -1,0 +1,29 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="leaf1" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#d9c4a1" offset="0%"/>
+      <stop stop-color="#c39b72" offset="100%"/>
+    </linearGradient>
+    <linearGradient id="leaf2" x1="1" y1="0" x2="0" y2="1">
+      <stop stop-color="#e6d6b8" offset="0%"/>
+      <stop stop-color="#c8a47b" offset="100%"/>
+    </linearGradient>
+    <linearGradient id="leaf3" x1="0" y1="1" x2="1" y2="0">
+      <stop stop-color="#e4c89c" offset="0%"/>
+      <stop stop-color="#b98f63" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="#f2eadf"/>
+  <g opacity="0.38">
+    <path d="M180 180c90-180 240-120 280 20-120 30-220 40-280-20Z" fill="url(#leaf1)" />
+    <path d="M320 240c120-120 240-60 250 90-110 40-210 0-250-90Z" fill="url(#leaf2)" />
+    <path d="M220 420c-40-150 160-230 280-130-20 120-170 210-280 130Z" fill="url(#leaf3)" />
+    <path d="M720 180c140-150 260-40 230 130-130-10-210-40-230-130Z" fill="url(#leaf2)" />
+    <path d="M680 360c100-140 240-120 270 40-120 30-210 0-270-40Z" fill="url(#leaf1)" />
+    <path d="M540 520c-60-160 180-270 320-150-40 130-210 230-320 150Z" fill="url(#leaf3)" />
+    <path d="M220 760c120-170 270-120 300 40-130 30-250 20-300-40Z" fill="url(#leaf2)" />
+    <path d="M760 760c140-160 260-80 240 110-130-10-220-30-240-110Z" fill="url(#leaf1)" />
+    <path d="M620 980c-80-170 180-280 320-150-30 130-220 230-320 150Z" fill="url(#leaf3)" />
+    <path d="M260 1040c120-150 260-60 230 90-120 20-210-10-230-90Z" fill="url(#leaf1)" />
+  </g>
+</svg>
