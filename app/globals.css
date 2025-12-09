@@ -7,7 +7,7 @@
   --muted: #745a67;
   --accent: #d46ba6;
   --floral-pattern: url("data:image/svg+xml,%3Csvg width='440' height='440' viewBox='0 0 440 440' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='petal1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23f9c5d1'/%3E%3Cstop offset='1' stop-color='%23f7a1c0'/%3E%3C/linearGradient%3E%3ClinearGradient id='petal2' x1='1' y1='0' x2='0' y2='1'%3E%3Cstop stop-color='%23ffd6c2'/%3E%3Cstop offset='1' stop-color='%23ffece4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg opacity='0.45'%3E%3Cpath d='M80 120c30-60 90-60 120 0-30 20-90 20-120 0Z' fill='url(%23petal1)'/%3E%3Cpath d='M140 120c40-40 90-20 90 40-35 10-80-10-90-40Z' fill='url(%23petal2)'/%3E%3Cpath d='M120 200c-10-50 40-80 80-50-5 35-50 65-80 50Z' fill='%23f7a1c0'/%3E%3Cpath d='M260 120c28-46 82-54 118-6-28 18-80 26-118 6Z' fill='url(%23petal2)'/%3E%3Cpath d='M260 200c18-42 70-48 96-6-26 16-70 22-96 6Z' fill='url(%23petal1)'/%3E%3Cpath d='M200 280c-16-52 46-92 94-56-8 38-64 74-94 56Z' fill='%23ffd6c2'/%3E%3Cpath d='M120 320c22-50 78-56 110-8-30 18-84 22-110 8Z' fill='url(%23petal2)'/%3E%3Cpath d='M300 320c26-46 80-48 104 0-30 20-86 18-104 0Z' fill='url(%23petal1)'/%3E%3C/g%3E%3C/svg%3E");
-  font-family: var(--font-playfair), "Playfair Display", serif;
+  font-family: "Playfair Display", "Times New Roman", serif;
 }
 
 * {
