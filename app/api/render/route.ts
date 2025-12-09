@@ -19,8 +19,9 @@ export async function POST(req: Request) {
     }
 
     const buffer = await renderQuoteImage(text, template as TemplateKey);
+    const body = new Uint8Array(buffer);
 
-    return new NextResponse(buffer as unknown as BodyInit, {
+    return new NextResponse(body, {
       status: 200,
       headers: {
         "Content-Type": "image/png",
