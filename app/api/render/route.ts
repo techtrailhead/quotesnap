@@ -18,10 +18,9 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Unknown template" }, { status: 400 });
     }
 
-    const imageBuffer = await renderQuoteImage(text, template as TemplateKey);
-    const imageBytes = new Uint8Array(imageBuffer);
+    const pngBytes = new Uint8Array(await renderQuoteImage(text, template as TemplateKey));
 
-    return new NextResponse(imageBytes, {
+    return new NextResponse(pngBytes, {
       status: 200,
       headers: {
         "Content-Type": "image/png",
