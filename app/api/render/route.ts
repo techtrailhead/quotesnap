@@ -6,9 +6,9 @@ export const runtime = "nodejs";
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
-    const text: unknown = body?.text;
-    const template: unknown = body?.template;
+    const payload = await req.json();
+    const text: unknown = payload?.text;
+    const template: unknown = payload?.template;
 
     if (typeof text !== "string" || typeof template !== "string") {
       return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
@@ -19,9 +19,9 @@ export async function POST(req: Request) {
     }
 
     const buffer = await renderQuoteImage(text, template as TemplateKey);
-    const body = new Uint8Array(buffer);
+    const responseBody = new Uint8Array(buffer);
 
-    return new NextResponse(body, {
+    return new NextResponse(responseBody, {
       status: 200,
       headers: {
         "Content-Type": "image/png",
