@@ -36,12 +36,13 @@ export async function renderQuoteImage(text: string, templateKey: TemplateKey): 
 
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  ctx.fillStyle = template.textColor;
+  ctx.fillStyle = template.textColor || "#111111";
+  ctx.globalCompositeOperation = "source-over";
 
   applyTextShadow(ctx, template.textShadow);
 
   const maxWidth = WIDTH - template.padding * 2;
-  ctx.font = `${fontSize}px ${template.fontFamily}`;
+  ctx.font = `${fontSize}px ${template.fontFamily}, serif`;
 
   let lines = wrapText(ctx, normalizedText, maxWidth);
   let lineHeightPx = fontSize * template.lineHeight;
@@ -150,6 +151,10 @@ function wrapText(ctx: SKRSContext2D, text: string, maxWidth: number): string[] 
     if (line) {
       result.push(line);
     }
+  }
+
+  if (result.length === 0) {
+    result.push(text.trim());
   }
 
   return result;
