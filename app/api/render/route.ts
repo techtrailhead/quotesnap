@@ -6,9 +6,9 @@ export const runtime = "nodejs";
 
 export async function POST(req: Request) {
   try {
-    const payload = await req.json();
-    const text: unknown = payload?.text;
-    const template: unknown = payload?.template;
+    const requestJson = await req.json();
+    const text: unknown = requestJson?.text;
+    const template: unknown = requestJson?.template;
 
     if (typeof text !== "string" || typeof template !== "string") {
       return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
