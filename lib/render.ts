@@ -42,12 +42,21 @@ export async function renderQuoteImage(text: string, templateKey: TemplateKey): 
   applyTextShadow(ctx, template.textShadow);
 
   const maxWidth = WIDTH - template.padding * 2;
-  ctx.font = `${fontSize}px ${template.fontFamily}, 'Inter', sans-serif`;
+  const primaryFont = `${fontSize}px ${template.fontFamily}, 'Inter', sans-serif`;
+  ctx.font = primaryFont;
 
   let lines = wrapText(ctx, normalizedText, maxWidth);
   let lineHeightPx = fontSize * template.lineHeight;
   let totalHeight = lines.length * lineHeightPx;
   const maxHeight = HEIGHT - template.padding * 2;
+
+  const textWidthZero = lines.every((line) => ctx.measureText(line).width === 0);
+  if (textWidthZero) {
+    ctx.font = `${fontSize}px serif`;
+    lines = wrapText(ctx, normalizedText, maxWidth);
+    lineHeightPx = fontSize * template.lineHeight;
+    totalHeight = lines.length * lineHeightPx;
+  }
 
   if (totalHeight > maxHeight) {
     const scale = maxHeight / totalHeight;
